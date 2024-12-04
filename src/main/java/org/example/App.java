@@ -23,6 +23,7 @@ public class App {
         }
         List<Adress> adressesForCycling = new ArrayList<>();
         adressesForCycling.add(new Adress("Romania", "Iasi", "Bisericii", 6));
+        adressesForCycling.add(new Adress("United Kingdom", "Yorkshire", "Fishergate", 12));
         List<Hobby> hobbyList = new ArrayList<>();
         hobbyList.add(new Hobby("Cycling", 20, adressesForCycling));
 
