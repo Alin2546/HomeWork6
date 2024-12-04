@@ -10,7 +10,6 @@ public class Person {
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
-
     }
 
     public String getName() {
@@ -45,7 +44,7 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return isEqual(getAge(), person.getAge()) && Objects.equals(getName(), person.getName());
+        return getAge() == person.getAge() && Objects.equals(getName(), person.getName());
     }
 
     @Override
@@ -53,9 +52,11 @@ public class Person {
         return Objects.hash(getName(), getAge());
     }
 
-    boolean isEqual(int x, int y) {
-        return x == y;
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
-
-
 }

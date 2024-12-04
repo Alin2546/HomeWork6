@@ -15,4 +15,18 @@ public class Adress{
         this.street = street;
         this.streetNumber = streetNumber;
     }
+
+    public String getCountry() {
+        return country;
+    }
+
+    @Override
+    public String toString() {
+        return "Adress{" +
+                "country='" + country + '\'' +
+                ", county='" + county + '\'' +
+                ", street='" + street + '\'' +
+                ", streetNumber=" + streetNumber +
+                '}';
+    }
 }

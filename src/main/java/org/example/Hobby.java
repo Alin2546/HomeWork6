@@ -14,4 +14,12 @@ public class Hobby {
         this.listOfAdresses = listOfAdresses;
     }
 
+    @Override
+    public String toString() {
+        return "Hobby{" +
+                "name='" + name + '\'' +
+                ", frequency=" + frequency +
+                ", listOfAdresses=" + listOfAdresses +
+                '}';
+    }
 }
