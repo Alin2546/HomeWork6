@@ -6,12 +6,16 @@ import java.util.List;
 public class Hobby {
     private String name;
     private int frequency;
-    List<Adress> listOfAdresses = new ArrayList<>();
+    List<Adress> listOfAdresses;
 
     public Hobby(String name, int frequency, List<Adress> listOfAdresses) {
         this.name = name;
         this.frequency = frequency;
         this.listOfAdresses = listOfAdresses;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
