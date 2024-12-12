@@ -20,30 +20,31 @@ public class App {
 
 
         // Created adresses
-        List<Adress> adressesForCycling = new ArrayList<>();
-        adressesForCycling.add(new Adress("Romania", "Iasi", "Bisericii", 6));
-        adressesForCycling.add(new Adress("United Kingdom", "Yorkshire", "Fishergate", 12));
+        List<Address> addressesForCycling = new ArrayList<>();
+        addressesForCycling.add(new Address("Romania", "Iasi", "Bisericii", 6));
+        addressesForCycling.add(new Address("United Kingdom", "Yorkshire", "Fishergate", 12));
 
-        List<Adress> adressesForRunning = new ArrayList<>();
-        adressesForRunning.add(new Adress("Albania", "albe", "Kronze", 2));
-        adressesForRunning.add(new Adress("Italy", "Roma", "St.pope", 24));
-        adressesForRunning.add(new Adress("Lithuania", "Elger", "makarel", 1));
+        List<Address> addressesForRunning = new ArrayList<>();
+        addressesForRunning.add(new Address("Albania", "albe", "Kronze", 2));
+        addressesForRunning.add(new Address("Italy", "Roma", "St.pope", 24));
+        addressesForRunning.add(new Address("Lithuania", "Elger", "makarel", 1));
 
 
         List<Hobby> hobbyList = new ArrayList<>();
-        hobbyList.add(new Hobby("Cycling", 20, adressesForCycling));
-        hobbyList.add(new Hobby("Running", 3, adressesForRunning));
+        hobbyList.add(new Hobby("Cycling", 20, addressesForCycling));
+        hobbyList.add(new Hobby("Running", 3, addressesForRunning));
 
         Map<Person, List<Hobby>> map = new HashMap<>();
         map.put(student, hobbyList);
+        System.out.println(student.getName());
         System.out.println("name of the hobby: " + map.get(student).get(0).getName());
-        System.out.println("Country where it can practiced: " + map.get(student).get(0).listOfAdresses.get(0).getCountry());
-        System.out.println("Second Country where it can practiced: " + map.get(student).get(0).listOfAdresses.get(1).getCountry());
+        System.out.println("Country where it can practiced: " + map.get(student).get(0).listOfAddresses.get(0).getCountry());
+        System.out.println("Second Country where it can practiced: " + map.get(student).get(0).listOfAddresses.get(1).getCountry());
         System.out.println();
         System.out.println("name of the hobby: " + map.get(student).get(1).getName());
-        System.out.println("Country where it can practiced: " + map.get(student).get(1).listOfAdresses.get(0).getCountry());
-        System.out.println("Second Country where it can practiced: " + map.get(student).get(1).listOfAdresses.get(1).getCountry());
-        System.out.println("Third Country where it can practiced: " + map.get(student).get(1).listOfAdresses.get(2).getCountry());
+        System.out.println("Country where it can practiced: " + map.get(student).get(1).listOfAddresses.get(0).getCountry());
+        System.out.println("Second Country where it can practiced: " + map.get(student).get(1).listOfAddresses.get(1).getCountry());
+        System.out.println("Third Country where it can practiced: " + map.get(student).get(1).listOfAddresses.get(2).getCountry());
 
 
     }

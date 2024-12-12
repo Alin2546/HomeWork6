@@ -29,6 +29,13 @@ public class Person {
         this.age = age;
     }
 
+    /**
+     * <p>
+     * A simple comparator where the person
+     * * instances are compared by name and if they are equal they are then compared by age
+     * </p>
+     */
+
     //    static Comparator<Person> compareByName = Comparator.comparing(Person :: getName);
     //    static Comparator<Person> compareByAge = Comparator.comparing(Person :: getAge);
 
@@ -46,11 +53,6 @@ public class Person {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
         return getAge() == person.getAge() && Objects.equals(getName(), person.getName());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName(), getAge());
     }
 
     @Override
